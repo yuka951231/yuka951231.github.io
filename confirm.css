@@ -190,7 +190,7 @@ h2 {
 }
 
 /* ご予約情報 */
-.reservation-info p, .user-info p {
+.reservation-info p, .user-info p ,user-info a{
     font-size: 1.4rem;
     color: #74151B;
     margin-bottom: 10px;
