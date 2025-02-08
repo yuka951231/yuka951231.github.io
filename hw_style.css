@@ -144,7 +144,7 @@ select {
     display: block;
     width: 35px;
     height: 35px;
-    background-image: url(https:://yuka951231.github.io/hamburger.png);
+    background-image: url(https://yuka951231.github.io/hamburger.png);
     background-repeat: no-repeat;
     background-size: contain; 
     background-position: center;
@@ -173,7 +173,7 @@ h1{
 }
 
 .news_container{
-    background-image: url(https:://yuka951231.github.io/line.png),url(https:://yuka951231.github.io/line.png),url(https:://yuka951231.github.io/news_bg.png);
+    background-image: url(https://yuka951231.github.io/line.png),url(https://yuka951231.github.io/line.png),url(https://yuka951231.github.io/news_bg.png);
     background-repeat: no-repeat;
     background-size: auto,auto,cover;
     background-position: 5% 5%, 98% 95%;
@@ -244,7 +244,7 @@ h1{
 
 
 .feature_container{
-    background-image: url(https:://yuka951231.github.io/line_2.png),url(https:://yuka951231.github.io/line_3.png);
+    background-image: url(https://yuka951231.github.io/line_2.png),url(https://yuka951231.github.io/line_3.png);
     background-repeat: no-repeat;
     background-size: auto,auto;
     background-position: 5% 0, 95% 0;
@@ -295,7 +295,7 @@ h1{
 
 
 .menu_container{
-    background-image: url(https:://yuka951231.github.io/line.png),url(https:://yuka951231.github.io/line.png),url(https:://yuka951231.github.io/line.png),url(https:://yuka951231.github.io/line.png),url(https:://yuka951231.github.io/menu_bg.png);
+    background-image: url(https://yuka951231.github.io/line.png),url(https://yuka951231.github.io/line.png),url(https://yuka951231.github.io/line.png),url(https://yuka951231.github.io/line.png),url(https://yuka951231.github.io/menu_bg.png);
     background-repeat: no-repeat;
     background-size: auto,auto,auto,auto,cover;
     background-position: 5% 5%, 95% 5%, 5% 97%, 95% 97%;
@@ -326,7 +326,7 @@ h1{
 }
 
 .reserv_container{
-    background-image: url(https:://yuka951231.github.io/line_2.png),url(https:://yuka951231.github.io/line_3.png);
+    background-image: url(https://yuka951231.github.io/line_2.png),url(https://yuka951231.github.io/line_3.png);
     background-repeat: no-repeat;
     background-size: auto,auto;
     background-position: 0 0, 100% 0;
@@ -391,7 +391,7 @@ h1{
 
 
 .access_container{
-    background-image: url(https:://yuka951231.github.io/access_bg.png);
+    background-image: url(https://yuka951231.github.io/access_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 50px 20px 0;
@@ -633,7 +633,7 @@ dd{
     }
 
     .feature_container{
-        background-image: url(https:://yuka951231.github.io/line_2.png),url(https:://yuka951231.github.io/line_3.png);
+        background-image: url(https://yuka951231.github.io/line_2.png),url(https://yuka951231.github.io/line_3.png);
         background-repeat: no-repeat;
         background-size: auto,auto;
         background-position: 5% 0, 95% 0;
@@ -686,7 +686,7 @@ dd{
     .menu_container{
         max-width: 1360px;
         margin: 0 auto;
-        background-image: url(https:://yuka951231.github.io/pc_menu_line_l.png) ,url(https:://yuka951231.github.io/line.png),url(https:://yuka951231.github.io/line.png),url(https:://yuka951231.github.io/line.png),url(https:://yuka951231.github.io/line.png), url(https:://yuka951231.github.io/pc_menu_line_r.png) ,url(https:://yuka951231.github.io/menu_bg.png);
+        background-image: url(https://yuka951231.github.io/pc_menu_line_l.png) ,url(https://yuka951231.github.io/line.png),url(https://yuka951231.github.io/line.png),url(https://yuka951231.github.io/line.png),url(https://yuka951231.github.io/line.png), url(https://yuka951231.github.io/pc_menu_line_r.png) ,url(https://yuka951231.github.io/menu_bg.png);
         background-repeat: no-repeat;
         background-size: auto,auto,auto,auto,auto,auto,cover;
         background-position: 1% 1%, 5% 5%, 95% 5%, 5% 95%, 95% 95%,99% 99%;
@@ -710,7 +710,7 @@ dd{
     }
 
     .reserv_container{
-        background-image: url(https:://yuka951231.github.io/line_2.png),url(https:://yuka951231.github.io/line_3.png);
+        background-image: url(https://yuka951231.github.io/line_2.png),url(https://yuka951231.github.io/line_3.png);
         background-repeat: no-repeat;
         background-size: auto,auto;
         background-position: 5% 0, 95% 0;
