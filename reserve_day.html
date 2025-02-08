@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日程選択</title>
+    <link rel="stylesheet" href="./css/reserve_day.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="spview">
+        <section class="head_section">
+            <div class="flexbox_container">
+                <div class="flexbox_item btn_reserve">
+                    <a href="reserve_day.html" target="_blank" rel="noopener">予約</a>
+                </div>
+                <div class="flexbox_item select-wrapper">
+                    <select class="language" name="language" id="">
+                        <option value="Japanese">JP</option>
+                        <option value="Chainese">CN</option>
+                    </select>
+                </div>
+                <div class="flexbox_item hamburger_menu">
+                    <a href=""></a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <header class="pcview">
+        <div class="flexbox_container">
+            <div class="flexbox_item">
+                <a href="index.html#news">NEWS</a>
+            </div>
+
+            <div class="flexbox_item">
+                <a href="index.html#menu">MENU</a>
+            </div>
+
+            <div class="flexbox_item">
+                <a href="reserve_day.html" target="_blank " rel="noopener">RESERVATION</a>
+            </div>
+
+            <div class="flexbox_item">
+                <a href="index.html#access">ACCESS</a>
+            </div>
+
+            <div class="flexbox_item select-wrapper">
+                <select class="language" name="language" id="">
+                    <option value="Japanese">JP</option>
+                    <option value="Chainese">CN</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <h1 class="spview">RESERVATION</h1>
+        <div class="status_box">
+            <ul>
+                <li>情報入力</li>
+                <li>確認</li>
+                <li>完了</li>
+            </ul>
+        </div>
+
+        <form class="reservation_form">
+            <!-- 来店日・来店時間 -->
+            <div class="form_group">
+                <div class="form_item">
+                    <label for="visit_date">来店日</label>
+                    <select id="visit_date" name="visit_date">
+                        <option value="" disabled selected></option>
+                        <option value="2025-01-28">2025年1月28日</option>
+                        <option value="2025-01-29">2025年1月29日</option>
+                        <option value="2025-01-30">2025年1月30日</option>
+                    </select>
+                </div>
+                <div class="form_item">
+                    <label for="visit_time">来店時間</label>
+                    <select id="visit_time" name="visit_time">
+                        <option value="" disabled selected></option>
+                        <option value="10:00">10:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="14:00">14:00</option>
+                    </select>
+                </div>
+            </div>
+        
+            <!-- 来店人数（合計）、大人、子供 -->
+            <div class="form_group_2">
+                <div class="form_item">
+                    <label>来店人数(合計)</label>
+                    <span id="totalGuests">0</span>
+                </div>
+                <div class="form_item">
+                    <label for="adults">大人</label>
+                    <select id="adults" name="adults">
+                        <option value="" disabled selected></option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="form_item">
+                    <label for="children">子ども</label>
+                    <select id="children" name="children">
+                        <option value="" disabled selected></option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <form class="reservation_form">
+            <div class="form_group">
+                <div class="form_item">
+                    <label>コースの選択</label>
+                    <div class="radio_options">
+                        <label>
+                            <input type="radio" name="course" value="none" checked>
+                            指定しない
+                        </label>
+                        <label>
+                            <input type="radio" name="course" value="offer_course">
+                            お得コース (¥2,200)
+                        </label>
+                        <label>
+                            <input type="radio" name="course" value="chinese_course">
+                            中華コース (¥3,300)
+                        </label>
+                        <label>
+                            <input type="radio" name="course" value="satisfaction_course">
+                            満足満腹コース (¥3,800)
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- 入力フォーム -->
+    <div class="form-container">
+        <form action="#" method="POST">
+            <!-- お名前（漢字・カナ） -->
+            <div class="form-group">
+                <label>お名前（漢字・カナ）</label>
+                <div class="name-container">
+                    <!-- 上段：漢字 -->
+                    <div class="name-row">
+                        <input type="text" id="last-name-kanji" name="last-name-kanji" placeholder="山田" required>
+                        <input type="text" id="first-name-kanji" name="first-name-kanji" placeholder="太郎" required>
+                    </div>
+                    <!-- 下段：カタカナ -->
+                    <div class="name-row">
+                        <input type="text" id="last-name-kana" name="last-name-kana" placeholder="ヤマダ" required>
+                        <input type="text" id="first-name-kana" name="first-name-kana" placeholder="タロウ" required>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- 年齢 -->
+            <div class="form-group age-group">
+                <label for="age">年齢</label>
+                <div class="age-container">
+                    <input type="number" id="age" name="age" placeholder="30" required>
+                    <span class="unit">歳</span>
+                </div>
+            </div>
+            
+
+            <!-- お電話番号 -->
+            <div class="form-group">
+                <label for="phone">お電話番号</label>
+                <div class="phone-container">
+                    <input type="text" id="phone1" maxlength="3" placeholder="045" />
+                    <span>-</span>
+                    <input type="text" id="phone2" maxlength="4" placeholder="123" />
+                    <span>-</span>
+                    <input type="text" id="phone3" maxlength="4" placeholder="4567" />
+                </div>
+            </div>
+            
+
+            <!-- メールアドレス -->
+            <div class="form-group">
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" placeholder="yuk51231@gmail.com" required>
+            </div>
+
+            <!-- メールアドレス確認 -->
+            <div class="form-group">
+                <label for="email-confirm">メールアドレス確認</label>
+                <input type="email" id="email-confirm" name="email-confirm" placeholder="yuk51231@gmail.com" required>
+            </div>
+
+            <!-- ご利用目的 -->
+            <div class="form-group usage-purpose">
+                <label for="purpose">ご利用目的</label>
+                <select id="purpose" name="purpose">
+                    <option value="" disabled selected></option>
+                    <option value="personal">個人利用</option>
+                    <option value="business">ビジネス利用</option>
+                    <option value="other">その他</option>
+                </select>
+            </div>
+
+            <!-- その他特記事項 -->
+            <div class="form-group">
+                <label for="remarks">その他特記事項</label>
+                <textarea id="remarks" name="remarks"></textarea>
+            </div>
+        </form>
+    </div>
+
+
+        
+
+        <div class="btn_item">
+            <p><a href="confirm.html" class="btn_p">確認画面へ進む</a></p>
+        </div>
+
+
+
+
+    </main>
+    <footer>
+        <div class="content_container">
+            <h4 class="content_title">CONTENT</h4>
+            <div class="content_item">
+                <ul>
+                    <li><a href="index.html#news">NEWS</a></li>
+                    <li><a href="index.html#menu">MENU</a></li>
+                    <li><a href="reserve_day.html" target="_blank" rel="noopener">RESERVATION</a></li>
+                    <li><a href="index.html#access">ACCESS</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="copy_container">
+                <p class="copy_text">&copy;2024 中国料理 醇華園</p>
+            </div>
+    </footer>
+    
+</body>
+</html>
