@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+.pcview{
+    display: none;
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    list-style:none;
+}
+
+body{
+    background-color: #E4C786;
+    font-family: "Cinzel","Noto Serif JP", serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.flexbox_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    padding-right: 20px;
+  }
+
+  .flexbox_item{
+    margin: 5px;
+  }
+
+  .btn_reserve a{
+    display: block;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    background-color: #74151B;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    transition: .3s;
+}
+
+.btn_reserve a:hover{
+    border: 1px solid #74151B;
+    background-color: white;
+    color: #74151B;
+    box-sizing: border-box;
+}
+
+.select-wrapper{
+    position: relative;
+}
+
+.select-wrapper::after{
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+}
+
+select {
+    font-size: 1.6rem;
+    color: white;
+    background-color: #74151B; 
+    border-radius: 5px;
+    padding: 8px 12px; /* 内側の余白 */
+    width: 60px;
+    height: 40px;
+    -webkit-appearance: none; /* デフォルトのスタイルを削除（WebKitブラウザ用） */
+    -moz-appearance: none; /* デフォルトのスタイルを削除（Firefox用） */
+    appearance: none; /* デフォルトのスタイルを削除 */
+}
+
+.hamburger_menu{
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/hamburger.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: center;
+    flex-shrink: 0;
+}
+
+h1{
+    color: #74151B;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 2.4rem;
+
+}
+
+h1::after{
+    content: "―";
+    color: #74151B;
+    font-size: 2.4rem;
+    display: block;
+}
+
+.menu_container{
+    background-color: #A78F59;
+    border-radius: 10px;
+    margin: 30px 20px 0;
+}
+
+.flexbox_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.img_box{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.img_box ul{
+    display: flex;
+}
+
+.img_box li{ 
+    margin-top: 20px;
+
+}
+
+.letter_box{
+    max-width: 628px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    
+}
+
+.letter_box ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.letter_box p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.letter_box span{
+    font-size: 1.3rem;
+    padding-left: 5px;
+
+}
+
+.part{
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.under_boder{
+    border-bottom: 1px solid #535353;  /* 下の白い線 */
+    padding: 5px 0;  /* 上下のパディングを追加して線との間隔を確保 */
+}
+
+.letter{
+    margin: 10px 0 30px;
+}
+
+.btn_box{
+    padding-bottom: 30px;
+    padding-right: 15px;
+    text-align: right; /* ボタンを右寄せに配置 */
+
+}
+
+.btn{
+    font-size: 1.5rem;
+    letter-spacing: .1em;
+	--arrow-color:white; /* 矢印の色を設定 */
+	position: relative; /* 疑似要素を位置指定するための基準 */
+	padding: 0 1.0em .5em .5em; /* 内側の余白（右に矢印部分を空ける） */
+	color: var(--arrow-color); /* 文字色を矢印の色と統一 */
+}
+
+.btn::before {
+	border-bottom: 1px solid var(--arrow-color); /* 下線としての矢印部分 */
+	border-right: 1px solid var(--arrow-color); /* 右線としての矢印部分 */
+	bottom: 0; /* 矢印をボタン下部に配置 */
+	content: ''; /* 疑似要素でコンテンツを空に設定 */
+	height: 12px; /* 矢印の高さ */
+	position: absolute; /* 親要素から相対的に配置 */
+	left: 0; /* 矢印の位置を左端に */
+	transform: skewX(50deg); /* 矢印の形状を傾けてデザイン */
+	width: 100%; /* ボタン全体の幅に矢印を合わせる */
+	transition: all .3s; /* なめらかな動き（ホバー時） */
+}
+
+/* マウスオーバー時の動き */
+.btn:hover::before {
+	left: 10%; /* ホバー時、矢印が右に10%ずれる */
+}
+
+.content_container{
+    margin: 50px 20px 0;
+}
+
+.content_title{
+    color: #74151B;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: .05em;
+    margin-bottom: 15px;
+}
+
+.content_item li{
+    margin-bottom: 10px;
+}
+
+.content_item a{
+    color: #74151B;
+    font-size: 1.4rem;
+    letter-spacing: .05em;
+}
+
+.content_item a:hover {
+    color: #A01E26; /* 少し明るい赤系に変更 */
+    text-decoration: underline; /* 下線を追加 */
+    transition: color 0.3s ease-in-out; /* 滑らかな色の変化 */
+}
+
+
+.copy_container{
+    background-color: #74151B;
+    margin-top: 30px;
+    height: 70px;
+}
+
+.copy_text{
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.3rem;
+    letter-spacing: .05em;
+    font-weight: bold;
+}
+
+.content_container{
+    border-top: 1px solid white;  /* 上の白い線 */
+    padding: 20px 0;  /* 上下のパディングを追加して線との間隔を確保 */
+
+}
+
+
+@media only screen and (min-width:769px){
+
+    .spview{
+        display: none !important;
+    }
+
+    .pcview{
+        display: block;
+    }
+
+    .img{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .flexbox_container{
+        margin: 60px auto 50px;
+        max-width: 1360px;
+    }
+    
+      .flexbox_item{
+        margin: 20px;
+
+      }
+
+      .flexbox_item a{
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #74151B;
+        letter-spacing: .1em;
+      }
+
+      .flexbox_item a:hover {
+        background-color: #74151B; /* 背景色をリンクの文字色と同じに */
+        color: #E4C786; /* 文字色を背景と同じにして反転 */
+        padding: 5px 10px; /* 余白を追加して読みやすく */
+        border-radius: 5px; /* 角を少し丸める */
+        transition: all 0.3s ease-in-out;
+    }
+    
+
+      .course-container {
+        display: flex;
+        flex-direction: column;  /* 縦に並べる */
+        justify-content: center;  /* 必要ならば中央揃えに */
+        width: 80%;  /* 必要に応じて調整、例えば80%の幅 */
+        margin: 0 auto 100px;  /* 左右の余白を自動調整で中央に配置 */
+        min-width: 700px;  /* 最小幅を指定 */
+    }
+    
+    .course-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* 画像と文章が収まるように */
+        gap: 10px; /* 画像と文章の間のスペース */
+    }
+    
+    .course-img img {
+        max-width: 100%; /* 画像のサイズ調整 */
+        height: 393px;
+    }
+    
+    .course-info {
+        flex: 1;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .info-up {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 1px solid #74151B;  /* 上の白い線 */
+        border-bottom: 1px solid #74151B;  /* 下の白い線 */
+        padding: 20px 0;  /* 上下のパディングを追加して線との間隔を確保 */
+    }
+
+
+    .course-info h2 {
+        font-size: 1.8rem;
+        color: #74151B;
+        padding-left: 10px;
+    }
+
+    .course-info h2 span {
+        font-size: 1.3rem;
+        font-weight: lighter;
+        margin-right: 5px;
+    }
+    
+    .course-info .price {
+        font-size: 1.8rem;
+        color: #74151B;
+        font-weight: bold;
+    }
+    
+    .course-info .btn-reserve {
+        margin-left: auto;
+        display: block;
+        width: 160px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        color:  white;
+        background-color: #74151B;
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 1.2rem;
+        transition: .3s;
+        position: relative;
+    }
+
+    .course-info .btn-reserve:hover{
+        border: 1px solid #74151B; /* ボーダーを#A78F59に変更 */
+        background-color: white; /* 背景色を白に変更 */
+        color: #74151B; /* 文字色を#A78F59に変更 */
+        box-sizing: border-box; /* box-sizingを追加 */
+    }
+
+    
+    /* コース内容部分を中央揃えにする */
+    .course-details {
+        list-style: none;
+        padding: 0;
+        text-align: center;  /* 中央揃え */
+        margin-top: 15px;  /* 余白を追加 */
+    }
+    
+    .course-details li {
+        font-size: 1.5rem;
+        color: #74151B;
+        margin-bottom: 12px;
+    }
+
+    .course-details li.course-header {
+        font-size: 1.8rem;
+        display: flex;
+        align-items: center;  /* 垂直方向中央揃え */
+        justify-content: center;  /* 水平方向中央揃え */
+        gap: 10px; /* アイコンと文字の間隔 */
+        line-height: normal; /* 見切れを防ぐ */
+    }
+    
+    .course-details li.course-header::before,
+    .course-details li.course-header::after {
+        content: ""; 
+        display: flex;  /* `block` ではなく `flex` にすることで中央揃えを確実に */
+        align-items: center; /* アイコンの中央揃え */
+        justify-content: center;
+        width: 35px; /* サイズを調整 */
+        height: 35px;
+        background-image: url(../images/pc_course_icon.png);
+        background-size: contain; /* `cover` ではなく `contain` に戻す */
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+    }
+    
+      
+}
+    

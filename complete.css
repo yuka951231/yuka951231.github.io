@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+.pcview{
+    display: none;
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    list-style:none;
+}
+
+body{
+    background-color: #E4C786;
+    font-family: "Cinzel","Noto Serif JP", serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.flexbox_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    padding-right: 20px;
+  }
+
+  .flexbox_item{
+    margin: 5px;
+  }
+
+  .btn_reserve a{
+    display: block;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    background-color: #74151B;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    transition: .3s;
+}
+
+.btn_reserve a:hover{
+    border: 1px solid #74151B;
+    background-color: white;
+    color: #74151B;
+    box-sizing: border-box;
+}
+
+.select-wrapper{
+    position: relative;
+}
+
+.select-wrapper::after{
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+}
+
+select {
+    font-size: 1.6rem;
+    color: white;
+    background-color: #74151B; 
+    border-radius: 5px;
+    padding: 8px 12px; /* 内側の余白 */
+    width: 60px;
+    height: 40px;
+    -webkit-appearance: none; /* デフォルトのスタイルを削除（WebKitブラウザ用） */
+    -moz-appearance: none; /* デフォルトのスタイルを削除（Firefox用） */
+    appearance: none; /* デフォルトのスタイルを削除 */
+}
+
+.hamburger_menu{
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/hamburger.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: center;
+    flex-shrink: 0;
+}
+
+h1{
+    color: #74151B;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 2.4rem;
+    padding-bottom: 30px;
+
+}
+
+h1::after{
+    content: "―";
+    color: #74151B;
+    font-size: 2.4rem;
+    display: block;
+}
+
+.status_box ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.status_box li{
+    position: relative;
+    color: #74151B;
+    font-size: 1.5rem;
+    text-decoration: none;
+    flex-basis: 24%; /* アイテムの幅を少し広げて間隔を作る */
+    text-align: center;
+}
+
+
+.status_box li:nth-child(3) {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 矢印位置の調整 */
+.status_box li::after {
+    content: "»";
+    position: absolute;
+    right: -10px; /* 矢印の右端の位置調整 */
+    color: #74151B;
+    text-decoration: none;
+}
+
+/* 最後のliの矢印を削除 */
+.status_box li:nth-child(3)::after {
+    content: "";
+}
+
+.reservation_complete {
+    margin: 20px auto 0px; /* 左右自動調整で中央配置 */
+    max-width: 1200px;
+    display: block;
+}
+
+.reservation_complete h2 {
+    font-size: 1.4rem;
+    color: white; /* 文字色を白に */
+    background-color: #A78F59; /* ご予約情報と予約者情報の背景色 */
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.reservation_complete p {
+    font-size: 1.4rem;
+    color: #74151B;
+    line-height: 1.6;
+    text-align: left;
+    margin: 30px auto 0px;
+    max-width: 1000px;
+    display: block;
+    padding: 0px 20px;
+}
+
+.reservation_details {
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 60px auto 0px;
+    border: 1px solid #535353; /* 外枠を追加 */
+}
+
+.reservation_details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reservation_details li {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #74151B;
+}
+
+.reservation_details strong {
+    flex-shrink: 0;
+    width: 35%; /* 項目名の幅を適度に設定 */
+    text-align: right;
+    font-weight: bold;
+    color: #535353;
+}
+
+.reservation_details span {
+    flex-grow: 1;
+    text-align: left;
+    display: block; /* ← これを追加 */
+}
+
+
+
+.btn_p{
+    display: block;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #74151B;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #74151B;
+    font-size: 1.4rem;
+    transition: .3s;
+    position: relative;
+    margin: 50px auto 100px;
+}
+
+.btn_p::after{
+    content:"";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #74151B;
+    border-right: 1px solid #74151B;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0,-50%) rotate(45deg);
+}
+
+.btn_p:hover{
+    border: 1px solid white;
+    background-color: #74151B;
+    box-sizing: border-box;
+    color: white;
+}
+
+.btn_p:hover::after{
+    border-color: white;
+}
+
+.content_container{
+    margin: 50px 20px 0;
+}
+
+.content_title{
+    color: #74151B;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: .05em;
+    margin-bottom: 15px;
+}
+
+.content_item li{
+    margin-bottom: 10px;
+}
+
+.content_item a{
+    color: #74151B;
+    font-size: 1.4rem;
+    letter-spacing: .05em;
+}
+
+.content_item a:hover {
+    color: #A01E26; /* 少し明るい赤系に変更 */
+    text-decoration: underline; /* 下線を追加 */
+    transition: color 0.3s ease-in-out; /* 滑らかな色の変化 */
+}
+
+.copy_container{
+    background-color: #74151B;
+    margin-top: 30px;
+    height: 70px;
+}
+
+.copy_text{
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.3rem;
+    letter-spacing: .05em;
+    font-weight: bold;
+}
+
+.content_container{
+    border-top: 1px solid white;  /* 上の白い線 */
+    padding: 20px 0;  /* 上下のパディングを追加して線との間隔を確保 */
+
+}
+
+@media only screen and (min-width:769px){
+
+    .spview{
+        display: none !important;
+    }
+
+    .pcview{
+        display: block;
+    }
+
+    .img{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .flexbox_container{
+        margin: 60px auto 50px;
+        max-width: 1360px;
+    }
+    
+      .flexbox_item{
+        margin: 20px;
+
+      }
+
+      .flexbox_item a{
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #74151B;
+        letter-spacing: .1em;
+      }
+
+      .flexbox_item a:hover {
+        background-color: #74151B; /* 背景色をリンクの文字色と同じに */
+        color: #E4C786; /* 文字色を背景と同じにして反転 */
+        padding: 5px 10px; /* 余白を追加して読みやすく */
+        border-radius: 5px; /* 角を少し丸める */
+        transition: all 0.3s ease-in-out;
+    }
+}

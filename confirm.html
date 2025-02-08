@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>確認</title>
+    <link rel="stylesheet" href="./css/confirm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="spview">
+        <section class="head_section">
+            <div class="flexbox_container">
+                <div class="flexbox_item btn_reserve">
+                    <a href="reserve_day.html" target="_blank" rel="noopener">予約</a>
+                </div>
+                <div class="flexbox_item select-wrapper">
+                    <select class="language" name="language" id="">
+                        <option value="Japanese">JP</option>
+                        <option value="Chainese">CN</option>
+                </select>
+                </div>
+                <div class="flexbox_item hamburger_menu">
+                    <a href=""></a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <header class="pcview">
+        <div class="flexbox_container">
+            <div class="flexbox_item">
+                <a href="index.html#news">NEWS</a>
+            </div>
+
+            <div class="flexbox_item">
+                <a href="index.html#menu">MENU</a>
+            </div>
+
+            <div class="flexbox_item">
+                <a href="reserve_day.html" target="_blank " rel="noopener">RESERVATION</a>
+            </div>
+
+            <div class="flexbox_item">
+                <a href="index.html#access">ACCESS</a>
+            </div>
+
+            <div class="flexbox_item select-wrapper">
+                <select name="language" id="">
+                    <option value="Japanese">JP</option>
+                    <option value="Chainese">CN</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <h1 class="spview">RESERVATION</h1>
+        <div class="status_box">
+            <ul>
+                <li>情報入力</li>
+                <li>確認</li>
+                <li>完了</li>
+            </ul>
+        </div>
+
+        <!-- ご予約情報 -->
+        <div class="reservation">
+            <h2>ご予約情報</h2>
+            <div class="reservation-info">
+                <p><span>来店日</span> 2025年01月28日(火)</p>
+                <p><span>来店時間</span> 18:30</p>
+                <p><span>来店人数</span> 5名</p>
+                <p><span>コース選択</span> 指定しない</p>
+            </div>
+
+            <!-- 予約者情報 -->
+            <h2>予約者情報</h2>
+            <div class="user-info">
+                <p><span>お名前</span> 山田 太郎</p>
+                <p><span>フリガナ</span> ヤマダ タロウ</p>
+                <p><span>年齢</span> 30</p>
+                <p><span>電話番号</span> 045-123-4567</p>
+                <p><span>メールアドレス</span> <span class="email-address">yuk51231@gmail.com</span></p>
+
+            </div>
+        </div>
+
+
+        <div class="btn_item">
+            <p><a href="complete.html" class="btn_p">予約を確定する</a></p>
+        </div>
+
+        <div class="btn_item">
+            <p><a href="reserve_day.html" class="btn_y">修正する</a></p>
+        </div>
+    </main>
+    <footer>
+        <div class="content_container">
+            <h4 class="content_title">CONTENT</h4>
+            <div class="content_item">
+                <ul>
+                    <li><a href="index.html#news">NEWS</a></li>
+                    <li><a href="index.html#menu">MENU</a></li>
+                    <li><a href="reserve_day.html" target="_blank" rel="noopener">RESERVATION</a></li>
+                    <li><a href="index.html#access">ACCESS</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="copy_container">
+                <p class="copy_text">&copy;2024 中国料理 醇華園</p>
+            </div>
+    </footer>
+
+</body>
+</html>

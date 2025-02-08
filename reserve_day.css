@@ -1,0 +1,637 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+.pcview{
+    display: none;
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    list-style:none;
+}
+
+body{
+    background-color: #E4C786;
+    font-family: "Cinzel","Noto Serif JP", serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.flexbox_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    padding-right: 20px;
+  }
+
+  .flexbox_item{
+    margin: 5px;
+  }
+
+  .btn_reserve a{
+    display: block;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    background-color: #74151B;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    transition: .3s;
+}
+
+.btn_reserve a:hover{
+    border: 1px solid #74151B;
+    background-color: white;
+    color: #74151B;
+    box-sizing: border-box;
+}
+
+select {
+    appearance: none; /* 標準の矢印を非表示にする */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.select-wrapper{
+    position: relative;
+}
+
+.select-wrapper::after{
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+}
+
+.language {
+    font-size: 1.6rem;
+    color: white;
+    background-color: #74151B; 
+    border-radius: 5px;
+    padding: 8px 12px; /* 内側の余白 */
+    width: 60px;
+    height: 40px;
+}
+
+.hamburger_menu{
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/hamburger.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: center;
+    flex-shrink: 0;
+}
+
+h1{
+    color: #74151B;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 2.4rem;
+    padding-bottom: 30px;
+
+}
+
+h1::after{
+    content: "―";
+    color: #74151B;
+    font-size: 2.4rem;
+    display: block;
+}
+
+.status_box ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.status_box li{
+    position: relative;
+    color: #74151B;
+    font-size: 1.5rem;
+    text-decoration: none;
+    flex-basis: 24%; /* アイテムの幅を少し広げて間隔を作る */
+    text-align: center;
+}
+
+.status_box li:nth-child(1) {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 矢印位置の調整 */
+.status_box li::after {
+    content: "»";
+    position: absolute;
+    right: -10px; /* 矢印の右端の位置調整 */
+    color: #74151B;
+    text-decoration: none;
+}
+
+/* 最後のliの矢印を削除 */
+.status_box li:nth-child(3)::after {
+    content: "";
+}
+
+
+/* フォーム全体を画面中央に配置 */
+.reservation_form {
+    max-width: 600px; /* コンテナの最大幅を設定 */
+    margin: 30px auto; /* 中央揃えと左右の自動調整 */
+    
+    /* 画面幅に応じて左右に余白を設定 */
+    width: calc(100% - 40px); /* 親コンテナに左右20pxの余白を確保 */
+    box-sizing: border-box; /* パディングを含めた幅を計算 */
+}
+
+/* 来店日・来店時間の調整 */
+.form_group {
+    display: flex;
+    flex-direction: row; /* 横並びにする */
+    justify-content: space-between; /* 左右の空白を確保 */
+    align-items: center; /* ラベルとプルダウンを縦中央に揃える */
+    margin-bottom: 20px; /* 下部に余白 */
+}
+
+/* ラベルとプルダウンの個別スタイル */
+.form_item {
+    display: flex;
+    flex-direction: column; /* ラベルとプルダウンを縦に並べる */
+    text-align: center; /* 中央揃え */
+    width: 48%; /* 幅を50%未満にして間隔を自動調整 */
+    position: relative;
+}
+
+
+.form_item label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #535353;
+    text-align: left;
+}
+
+.form_item select,
+.form_item span {
+    padding: 8px;
+    font-size: 1.4rem;
+    background-color: #F6E5C1; /* 塗りつぶし色 */
+    border: none; /* 枠線を削除 */
+    border-radius: 5px;
+}
+
+
+/* 来店人数(合計)、大人、子供の各要素に設定 */
+.form_group_2 {
+    display: flex;
+    flex-direction: row; /* 横並びにする */
+    justify-content: space-between; /* 左右の空白を確保 */
+    align-items: center; /* ラベルとプルダウンを縦中央に揃える */
+    
+}
+
+/* 来店人数(合計)、大人、子供に幅を均等に設定 */
+.form_group_2 .form_item {
+    width: 30%; /* 各要素の幅を均等に設定 */
+    text-align: center;
+}
+
+
+/* 既存の reservation_form のスタイルを他の部分に影響を与えないように、ラジオボタン専用のクラス名を使う */
+.radio_options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px; /* ラベル間のスペース */
+}
+
+.radio_options label {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #535353;
+    white-space: nowrap; /* 折り返しを防ぐ */
+    text-overflow: ellipsis; /* 長いテキストが切れる場合、省略記号を追加 */
+    overflow: hidden; /* 省略記号を使うために、溢れた部分を隠す */
+}
+
+.radio_options input[type="radio"] {
+    margin-right: 10px; /* ラジオボタンとラベルの間隔 */
+}
+
+/* ラベルとラジオボタン間の間隔を調整 */
+.radio_options label:first-child {
+    margin-top: 15px; /* 最初のラベル（コースの選択）と1つ目のラジオボタンの間隔 */
+}
+
+/* ラジオボタンのデフォルトスタイルを完全に削除 */
+.radio_options input[type="radio"] {
+    -webkit-appearance: none; /* WebKitベースのブラウザでのデフォルトスタイルの削除 */
+    -moz-appearance: none; /* Firefoxでのデフォルトスタイルの削除 */
+    appearance: none; /* 全てのブラウザに対応 */
+    width: 20px; /* ラジオボタンの大きさ */
+    height: 20px;
+    border-radius: 50%; /* 丸い形にする */
+    cursor: pointer; /* ホバー時にカーソルをポインターに変更 */
+    position: relative;
+    background-color: #F6E5C1; /* 背景色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* ドロップシャドウ */
+}
+
+/* ラジオボタンが選択されたときの状態 */
+.radio_options input[type="radio"]:checked {
+    background-color: #F6E5C1; /* 選択された時の背景色 */
+    border: 2px solid #74151B; /* 枠線を追加 */
+}
+
+/* ラジオボタン内の小さな丸 */
+.radio_options input[type="radio"]:checked::before {
+    content: ''; /* 擬似要素に内容を設定 */
+    position: absolute;
+    top: 50%; /* 上端を50%に設定 */
+    left: 50%; /* 左端を50%に設定 */
+    width: 12px; /* 小さな丸の大きさ */
+    height: 12px; /* 小さな丸の大きさ */
+    border-radius: 50%; /* 丸い形 */
+    background-color: #74151B; /* 選択された時の小さな丸の色 */
+    transform: translate(-50%, -50%); /* 小さな丸を中央に配置 */
+}
+
+/* select を含む form_item にだけ矢印を適用 */
+.form_item select {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    background-color: #F6E5C1;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    padding-right: 30px; /* 矢印用スペース */
+}
+
+/* select を含む .form_item にだけ relative を設定 */
+.form_item:has(select) {
+    position: relative;
+}
+
+/* select を含む .form_item にだけ矢印を表示 */
+.form_item:has(select)::after {
+    content: "";
+    position: absolute;
+    top: 62%;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #535353;
+    border-bottom: 1px solid #535353;
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+}
+
+/* 入力フォーム全体のコンテナ */
+.form-container {
+    max-width: 600px; /* コンテナの最大幅を設定 */
+    margin: 30px auto; /* 中央揃えと左右の自動調整 */
+    
+    /* 画面幅に応じて左右に余白を設定 */
+    width: calc(100% - 40px); /* 親コンテナに左右20pxの余白を確保 */
+    box-sizing: border-box; /* パディングを含めた幅を計算 */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #535353;
+}
+
+
+/* 全ての入力フォームのスタイルを統一 */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.4rem;
+    background-color: #F6E5C1; /* 塗りつぶし色 */
+    border: none; /* 枠線を削除 */
+    border-radius: 4px; /* 角丸の保持 */
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #A19595; /* プレースホルダーの文字色 */
+}
+
+/* テキストエリアのスタイル */
+textarea {
+    height: 100px;
+}
+
+/* 名前入力欄のスタイル */
+.name-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 上下段の間隔 */
+}
+
+/* 名前入力欄の各行 */
+.name-row {
+    display: flex;
+    gap: 20px; /* 各入力フォームの間隔 */
+}
+
+.name-row input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1.4rem;
+    background-color: #F6E5C1; /* 塗りつぶし色 */
+    border: none; /* 枠線を削除 */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.name-row input::placeholder {
+    color: #A19595; /* プレースホルダーの文字色 */
+}
+
+/* 年齢入力欄 */
+.age-container {
+    display: flex;                /* 横並びに設定 */
+    align-items: center;          /* 垂直方向で中央揃え */
+    gap: 5px;                     /* 入力フォームと「歳」の間隔 */
+    width: auto;                  /* 親要素に幅を指定しない */
+    max-width: 160px;             /* 親要素の最大幅を指定 */
+}
+
+/* 年齢入力フォームの横幅を調整 */
+.age-container input[type="text"] {
+    width: 150px;                 /* 横幅を150pxに固定 */
+    padding: 10px;
+    font-size: 1.4rem;
+    background-color: #F6E5C1;    /* 塗りつぶし色 */
+    border: none;                 /* 枠線を削除 */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* 「歳」のスタイル */
+.age-container .unit {
+    font-size: 1.4rem;
+    color: #666;
+    margin-left: 5px; /* 入力フォームと「歳」の間隔調整 */
+}
+
+
+.age-container input[type="text"]::placeholder {
+    color: #A19595; /* プレースホルダーの文字色 */
+}
+
+.age-container .unit {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+/* 年齢の入力フォームでスピンボックス（上下矢印）を非表示にする */
+.age-container input[type="number"]::-webkit-outer-spin-button,
+.age-container input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.age-container input[type="number"] {
+    -moz-appearance: textfield; /* Firefoxでのスピンボックスを無効にする */
+}
+
+
+/* 電話番号入力フォームのスタイル */
+.phone-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 各電話番号の入力フォーム */
+.phone-container input[type="text"] {
+    width: 60px; /* 横幅を調整 */
+    padding: 10px;
+    font-size: 1.4rem;
+    background-color: #F6E5C1;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center; /* 入力文字を中央に配置 */
+}
+
+/* 「-」のスタイル */
+.phone-container span {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+
+
+/* ご利用目的のプルダウン */
+select {
+    width: 150px;                 /* 横幅を150pxに固定 */
+    padding: 10px;
+    font-size: 1.4rem;
+    background-color: #F6E5C1;    /* 塗りつぶし色 */
+    border: none;                 /* 枠線を削除 */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.usage-purpose {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px; /* 矢印のスペース確保 */
+  }
+  
+  .usage-purpose::after {
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #535353;
+    border-bottom: 1px solid #535353;
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+  }
+  
+
+
+
+.btn_p{
+    display: block;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #74151B;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #74151B;
+    font-size: 1.4rem;
+    transition: .3s;
+    position: relative;
+    margin: 50px auto 100px;
+}
+
+.btn_p::after{
+    content:"";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #74151B;
+    border-right: 1px solid #74151B;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0,-50%) rotate(45deg);
+}
+
+.btn_p:hover{
+    border: 1px solid white;
+    background-color: #74151B;
+    box-sizing: border-box;
+    color: white;
+}
+
+.btn_p:hover::after{
+    border-color: white;
+}
+
+.content_container{
+    margin: 50px 20px 0;
+}
+
+.content_title{
+    color: #74151B;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: .05em;
+    margin-bottom: 15px;
+}
+
+.content_item li{
+    margin-bottom: 10px;
+}
+
+.content_item a{
+    color: #74151B;
+    font-size: 1.4rem;
+    letter-spacing: .05em;
+}
+
+.content_item a:hover {
+    color: #A01E26; /* 少し明るい赤系に変更 */
+    text-decoration: underline; /* 下線を追加 */
+    transition: color 0.3s ease-in-out; /* 滑らかな色の変化 */
+}
+
+.copy_container{
+    background-color: #74151B;
+    margin-top: 30px;
+    height: 70px;
+}
+
+.copy_text{
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.3rem;
+    letter-spacing: .05em;
+    font-weight: bold;
+}
+
+.content_container{
+    border-top: 1px solid white;  /* 上の白い線 */
+    padding: 20px 0;  /* 上下のパディングを追加して線との間隔を確保 */
+
+}
+
+@media only screen and (min-width:769px){
+
+    .spview{
+        display: none !important;
+    }
+
+    .pcview{
+        display: block;
+    }
+
+    .img{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .flexbox_container{
+        margin: 60px auto 50px;
+        max-width: 1360px;
+    }
+    
+      .flexbox_item{
+        margin: 20px;
+
+      }
+
+      .flexbox_item a{
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #74151B;
+        letter-spacing: .1em;
+      }
+
+      .flexbox_item a:hover {
+        background-color: #74151B; /* 背景色をリンクの文字色と同じに */
+        color: #E4C786; /* 文字色を背景と同じにして反転 */
+        padding: 5px 10px; /* 余白を追加して読みやすく */
+        border-radius: 5px; /* 角を少し丸める */
+        transition: all 0.3s ease-in-out;
+    }
+
+
+
+}
