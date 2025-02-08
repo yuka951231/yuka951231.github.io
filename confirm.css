@@ -189,9 +189,8 @@ h2 {
     padding: 10px 0px;
 }
 
-
 /* ご予約情報 */
-.reservation-info p, .user-info p ,{
+.reservation-info p, .user-info p {
     font-size: 1.4rem;
     color: #74151B;
     margin-bottom: 10px;
