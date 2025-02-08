@@ -197,7 +197,7 @@ h2 {
     display: flex;
     justify-content: flex-start; /* 左寄せに変更 */
     align-items: center; /* 垂直方向のセンタリング */
-    gap: 90px; /* 項目と値の間にスペースを追加 */
+    gap: 85px; /* 項目と値の間にスペースを追加 */
 }
 
 
