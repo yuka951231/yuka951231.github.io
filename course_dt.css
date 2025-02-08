@@ -102,7 +102,7 @@ select {
     display: block;
     width: 35px;
     height: 35px;
-    background-image: url(../images/hamburger.png);
+    background-image: url(http:://yuk951231.github.io/hamburger.png);
     background-repeat: no-repeat;
     background-size: contain; 
     background-position: center;
@@ -433,7 +433,7 @@ h1::after{
         justify-content: center;
         width: 35px; /* サイズを調整 */
         height: 35px;
-        background-image: url(../images/pc_course_icon.png);
+        background-image: url(http:://yuk951231.github.io/pc_course_icon.png);
         background-size: contain; /* `cover` ではなく `contain` に戻す */
         background-position: center;
         background-repeat: no-repeat;
